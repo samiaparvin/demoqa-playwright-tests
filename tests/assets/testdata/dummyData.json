@@ -1,0 +1,17 @@
+{
+    "firstname":"John",
+    "lastname":"Doe",
+    "useremail":"john.doe@example.com",
+    "invalidemail":"john.doe@",
+    "Mobile":"0123456789",
+    "InvalidMobileAlphabet":"abc3456789",
+    "InvalidMobileBelow10Dig":"012345678",
+    "subject":"Math",
+    "curraddress":"123 Demo Street",
+    "age":"30",
+    "salary":"50000",
+    "department":"Engineer",
+    "deptQa":"QA",
+    "visibleScrhTxt":"Alden",
+    "ISBN":"9781449325861"
+}
