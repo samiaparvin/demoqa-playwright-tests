@@ -59,7 +59,7 @@ test.describe('Student Registration Form Function Tests', () => {
     .toHaveCSS('border-color', 'rgb(220, 53, 69)'); 
 
     await expect(studentregform.getInputLastName())
-    .toHaveCSS('border-color', 'rgb(207, 196, 203)'); 
+    .toHaveCSS('border-color', 'rgb(220, 53, 69)'); 
 
     await expect(studentregform.getInputMobile())
     .toHaveCSS('border-color', 'rgb(220, 53, 69)'); 
