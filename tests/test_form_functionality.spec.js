@@ -19,7 +19,7 @@ test.describe('Student Registration Form Function Tests', () => {
     await studentregform.fillMobileNumber(dummyData.Mobile);
 
     // Set Date of Birth
-    await studentregform.selectADateOfBirth();
+    await studentregform.selectADateOfBirth(dummyData.dobMon, dummyData.dobYear, dummyData.dobDay);
 
     // Subjects
     await studentregform.pickSubject(dummyData.subject);

@@ -31,7 +31,7 @@ export class studentRegForm{
     dob_month_sel = '.react-datepicker__month-select'
     dob_year_sel = '.react-datepicker__year-select'
     dob_days_of_month = '.react-datepicker__month'
-    dob_day_sel = '.react-datepicker__day--015'
+    //dob_day_sel = '.react-datepicker__day--015'
 
     subject_pick = '#subjectsContainer'
     subject = 'subjects-auto-complete__control css-yk16xz-control'
@@ -85,11 +85,11 @@ export class studentRegForm{
         return this.page.fill(this.txt_mobile_id, number);
     }
 
-    async selectADateOfBirth() {
+    async selectADateOfBirth(month, year,day) {
     await this.page.click(this.dob_id);
-    await this.page.selectOption(this.dob_month_sel, '0'); // January
-    await this.page.selectOption(this.dob_year_sel, '1990');
-    await this.page.click(this.dob_day_sel); // 15th
+    await this.page.selectOption(this.dob_month_sel, month);
+    await this.page.selectOption(this.dob_year_sel, year);
+    await this.page.locator(`.react-datepicker__day--${day}`);
     }
 
     async pickSubject(sub){
@@ -99,7 +99,6 @@ export class studentRegForm{
         const dropdownOption = this.page.locator(`div[id^="react-select-2-option"]:has-text("${sub}")`);
         await dropdownOption.waitFor();                                  // wait for dropdown to show
         await dropdownOption.click();
-        //await this.page.waitForSelector('.subjects-auto-complete__multi-value__label:has-text("Math")');
     }
 
     selectHobby(){

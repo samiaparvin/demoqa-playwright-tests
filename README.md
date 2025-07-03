@@ -71,7 +71,10 @@ npx playwright install
 ```
 This downloads the browser binaries (Chromium, Firefox, WebKit) used by Playwright.
 
-Playwright can also be installed from VS code editor Extension.
+OR
+
+**Playwright can also be installed from VS code editor Extension.**
+Go to Extension option from left menu of VS code -> search for 'playwright' and -> Install the one published by Microsoft. Then to install the playwright browser got to top meny view option -> command palette -> search 'playwright' -> click on 'Install Playwright Browsers' and -> select the browsers you wan tto intall then -> click 'ok'.
 
 ### Clone The Repository
 
@@ -89,7 +92,12 @@ cd demoqa-playwright-tests
 npx playwright test tests/test_form_functionality.spec.js tests/test_table_CRUD.spec.js tests/test_books_api.spec.js
 ```
 
-This will run all the tests and generate a HTML report. 
+This will run all the tests and generate a HTML report. The test will run on headless mode (without opeing browser visually). 
+If you wan to run on headed mode means with UI then include "--headed" after "npx playwright test". Example - 
+```bash
+npx playwright test --headed tests/test_form_functionality.spec.js tests/test_table_CRUD.spec.js tests/test_books_api.spec.js
+```
+
 To view the report run this  - 
 ```bash
 npx playwright show-report
@@ -112,7 +120,16 @@ for books APIs test -
 npx playwright test tests/test_books_api.spec.js
 ```
 
+### Note: The tests will run only in chromium browser 
 
+If you wan to run tests in other browsers, uncomment some lines in "playwright.config.js" and then run the tests. 
+
+1. For firefox desktop - uncomment line 44 to 47
+2. For webkit desktop - uncomment line 49 to 52
+3. For Mobile Chrome in Pixel 5 device - uncomment line 55 to 58
+4. For Mobile safari in iphone 12 - uncomment line 59 to 62
+5. For Microsoft Edge desktop - uncomment line 65 to 68
+6. For Google Chrome desktop - uncomment line 69 to 72
 
 
 
